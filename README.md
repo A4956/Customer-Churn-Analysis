@@ -152,15 +152,25 @@ The dashboard has 4 pages, ordered from the big picture to action.
 
 Page	Purpose	Main visuals
 Home	Introduces the project and navigates	Project title, short problem summary, page navigator
-Overview	How big is the problem?	Cards (total customers, churn rate, revenue lost, revenue at risk, high-risk customers), churned vs retained donut, revenue lost by contract, churn rate by contract and by tenure band, slicers
-Customer Churn Analysis	Why do customers leave?	Churn rate by payment method, tech support and internet service; customers by contract and churn; segment detail table; slicers for internet service, senior citizen, risk, tenure, payment method, online security
-ML Prediction and Customer Risk Analysis	Who is likely to leave next?	Cards (customers scored, high-risk customers, average churn probability, model ROC-AUC), customer risk distribution donut, high-risk customers by contract, and a table of active high-risk customers to contact
-
-Screenshots- <img width="1142" height="657" alt="Over View" src="https://github.com/user-attachments/assets/ac5cd97c-b838-44b7-a954-2b9ce26aa140" />
-<img width="1142" height="662" alt="ML prediction" src="https://github.com/user-attachments/assets/edac231a-29c9-464e-9e04-52511c9204ee" />
 <img width="1157" height="647" alt="Home" src="https://github.com/user-attachments/assets/c70db7a3-0ccd-454c-af04-fb119e127fcb" />
-<img width="1147" height="657" alt="Customer Churn analysis" src="https://github.com/user-attachments/assets/bac04890-7f98-4111-85b6-099575a5dc26" />
+
+
+Overview	How big is the problem?	Cards (total customers, churn rate, revenue lost, revenue at risk, high-risk customers), churned vs retained donut,
+revenue lost by contract, churn rate by contract and by tenure band, slicers
+The company has 7,043 customers, and 26.5% of them (1,869) have left. Those customers took 30.5% of monthly revenue with them (139K), and 87% of that loss came from month-to-month contracts. Churn is also worst early on, at 47% in the first year. So the problem is large, and it is concentrated in one kind of customer.
+<img width="1142" height="657" alt="Over View" src="https://github.com/user-attachments/assets/ac5cd97c-b838-44b7-a954-2b9ce26aa140" />
+
+Customer Churn Analysis:	
+Why do customers leave?	Churn rate by payment method, tech support and internet service; customers by contract and churn; segment detail table; slicers for internet service, senior citizen, risk, tenure, payment method, online security.
+The same customers share a pattern. They are on month-to-month plans (42.7% churn), pay by electronic check (45.3%), use fiber optic (41.9%), and have no tech support (41.6%) or online security (41.8%). Customers on longer contracts or with support services rarely leave (3% to 15%). So the leavers can be recognised by their profile.
 <img width="1147" height="657" alt="Customer Churn analysis" src="https://github.com/user-attachments/assets/fb00c146-1f0a-4afb-819b-da3e587d2e29" />
+
+
+ML Prediction and Customer Risk Analysis: 
+Who is likely to leave next?	Cards (customers scored, high-risk customers, average churn probability, model ROC-AUC), customer risk distribution donut, high-risk customers by contract, and a table of active high-risk customers to contact. 
+A model (ROC-AUC 0.843) scores every customer’s risk. About 63% of those marked High-risk really did churn, against 7% of Low-risk. Of the customers still with the company, 666 are high-risk, worth about 53.5K per month, and 662 of them are month-to-month. That gives the retention team a named list to contact first.
+<img width="1142" height="662" alt="ML prediction" src="https://github.com/user-attachments/assets/edac231a-29c9-464e-9e04-52511c9204ee" />
+
 
 
 Show Image Show Image Show Image
